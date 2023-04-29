@@ -10,15 +10,17 @@
     justify-content: flex-end;
 }
 
-.links * {}
-
-.linkSVG {
+.links * {
     flex-basis: 35px;
     flex-grow: 1;
     padding: 10px;
+}
+
+.linkSVG {
+    padding: 0;
     cursor: pointer;
 }
 
-.linkSVG:hover>path {
+.linkSVG:hover path:first-of-type {
     fill: #004C93;
 }

@@ -2,7 +2,7 @@ import styles from './ImportantLinks.module.css';
 import Github from '../img/Github'
 import LinkedIn from '../img/LinkedIn'
 
-const SideBar = () => {
+const ImportantLinks = () => {
     return (
         <>
             <div className={styles.links}>
@@ -13,4 +13,4 @@ const SideBar = () => {
     );
 }
 
-export default SideBar;
+export default ImportantLinks;
