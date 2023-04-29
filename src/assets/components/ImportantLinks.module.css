@@ -1,0 +1,24 @@
+.links {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 10%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.links * {}
+
+.linkSVG {
+    flex-basis: 35px;
+    flex-grow: 1;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.linkSVG:hover>path {
+    fill: #004C93;
+}

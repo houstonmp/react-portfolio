@@ -1,0 +1,21 @@
+#tp-body {
+    background-color: #0085FF;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#tp-body header {
+    color: white;
+    padding-left: 10%;
+}
+
+.main-Title {
+    font-size: 5rem;
+}
+
+.sub-Title {
+    font-size: 3rem;
+}
