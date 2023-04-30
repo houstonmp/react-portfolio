@@ -1,26 +1,19 @@
 .triangle_type_one {
-    width: 0;
-    height: 0;
-    border-left: 2rem solid transparent;
-    border-right: 2rem solid transparent;
-    border-top: 3rem solid white;
     position: fixed;
+    height: 10vh;
 }
 
 .triangle-1 {
-    transform: rotate(-30deg) scale(80%);
     top: 80%;
     left: 20%;
 }
 
 .triangle-2 {
-    transform: rotate(-30deg) scale(80%);
     top: 87%;
     left: 18%;
 }
 
 .triangle-3 {
-    transform: rotate(-30deg) scale(80%);
     top: 85%;
     left: 30%;
 }

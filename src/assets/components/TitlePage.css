@@ -7,7 +7,6 @@
     justify-content: center;
     gap: 50px;
     scroll-snap-align: start;
-    position: relative;
     /* overflow-y: scroll; */
 }
 
@@ -18,8 +17,10 @@
 
 .main-Title {
     font-size: 5rem;
+    font-weight: 300;
 }
 
 .sub-Title {
     font-size: 3rem;
+    font-weight: 300;
 }

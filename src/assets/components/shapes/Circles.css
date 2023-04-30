@@ -1,0 +1,19 @@
+.circle_type_one {
+    position: fixed;
+    height: 20vh;
+}
+
+.circle-1 {
+    top: 5%;
+    left: 5%;
+}
+
+.circle-2 {
+    top: 87%;
+    left: 18%;
+}
+
+.circle-3 {
+    top: 85%;
+    left: 30%;
+}
