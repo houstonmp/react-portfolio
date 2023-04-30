@@ -1,5 +1,6 @@
 import Shapes from '../shapes/Shapes';
 import ImportantLinks from '../ImportantLinks';
+import Information from './Information';
 import styles from './AboutMe.module.css';
 
 const AboutMe = () => {
@@ -7,6 +8,7 @@ const AboutMe = () => {
         <>
             <section id={styles.am_body}>
                 <Shapes />
+                <Information />
                 <ImportantLinks />
             </section>
         </>
