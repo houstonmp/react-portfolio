@@ -7,7 +7,7 @@
     justify-content: center;
     height: 100vh;
     margin: 0 2%;
-    z-index: 20;
+    z-index: 2;
 }
 
 .dot {
@@ -17,6 +17,7 @@
     border-radius: 50%;
     display: inline-block;
     margin: .5rem 0;
+    transition: all 1s;
 }
 
 .dot:hover {
