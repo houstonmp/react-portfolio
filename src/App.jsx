@@ -4,14 +4,14 @@ import TitlePage from './assets/components/titlepage/TitlePage';
 import SideBar from './assets/components/SideBar';
 import AboutMe from './assets/components/aboutme/AboutMe'
 import ImportantLinks from './assets/components/ImportantLinks';
+import Portfolio from './assets/components/portfolio/Portfolio';
 import './App.css'
 
 let docHeight = 0;
 let sectionHeight = 0;
 
 window.onload = () => {
-  docHeight = document.body.scrollHeight;
-  sectionHeight = docHeight / 2;
+  sectionHeight = document.body.scrollHeight;
 };
 
 function App() {
@@ -31,12 +31,15 @@ function App() {
 
   function doSomething(scrollPos) {
     // Do something with the scroll position
-    if (scrollPos > 0 && scrollPos < sectionHeight) {
-      console.log("Setting pageLocation:", 0);
+    if (scrollPos >= 0 && scrollPos < sectionHeight) {
+
       setLocation(0); //page 1
-    } else if (scrollPos > (sectionHeight * 1)) {
-      console.log("Setting pageLocation:", 1);
+    } else if ((scrollPos + 50) >= sectionHeight && scrollPos < (sectionHeight * 2)) {
+
       setLocation(1);//page 2
+    } else if ((scrollPos + 50) >= (sectionHeight * 2) && scrollPos < (sectionHeight * 3)) {
+
+      setLocation(2);
     }
   }
 
@@ -58,6 +61,12 @@ function App() {
           triangle: "triangle-1",
           isDark: true
         })
+      } else if (pageLocation === 2) {
+        setShape({
+          circle: "circle-2",
+          triangle: "triangle-2",
+          isDark: true
+        });
       }
     }
     , [pageLocation]
@@ -81,6 +90,7 @@ function App() {
       <div className="container" onScroll={scrollHandler}>
         <TitlePage circleType={shapeType.circle} triangleType={shapeType.triangle} isShown={pageLocation} />
         <AboutMe />
+        <Portfolio />
         <ImportantLinks isDark={shapeType.isDark} />
         <SideBar pageLocation={pageLocation} isDark={shapeType.isDark} />
       </div>

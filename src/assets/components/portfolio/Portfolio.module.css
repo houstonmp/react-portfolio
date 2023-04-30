@@ -1,0 +1,38 @@
+.portfolio {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 30% 0; */
+    gap: 50px;
+    scroll-snap-align: start;
+}
+
+.carousel {
+    /* width: 50%; */
+    flex-basis: 50%;
+    /* height: auto; */
+    height: 50vh;
+    position: relative;
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel a {
+    width: 100%;
+    height: 100%;
+    position: sticky;
+    left: 0;
+    flex-shrink: 0;
+
+    scroll-snap-align: start;
+    cursor: pointer;
+}
+
+a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

@@ -27,6 +27,12 @@
 }
 
 .triangle-2 {
-    top: 85%;
-    left: 30%;
+    top: 20%;
+    left: 50%;
+    /* transform: translate(50%, 50%); */
+    will-change: transform;
+}
+
+.triangle-2 * {
+    fill: #0085FF;
 }

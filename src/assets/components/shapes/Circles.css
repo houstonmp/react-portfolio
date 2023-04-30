@@ -27,6 +27,10 @@
 }
 
 .circle-2 {
-    top: 85%;
-    left: 30%;
+    -webkit-transform: translate(50%, 50%);
+    transform: translate(50%, 50%);
+}
+
+.circle-2 * {
+    fill: #004C93;
 }
