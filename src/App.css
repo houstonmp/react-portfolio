@@ -7,4 +7,36 @@ html {
 body {
   padding: 0;
   margin: 0;
+  overflow: overlay;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: auto;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+  background: transparent;
+  display: none;
+}
+
+*::-webkit-scrollbar-track {
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffadad;
+  border-radius: 12px;
+  border: 5px solid #ffffff;
+
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }

@@ -2,7 +2,7 @@
     position: fixed;
     right: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: 3;
     width: 10%;
     height: 10vh;
     display: flex;
@@ -11,7 +11,8 @@
 }
 
 .links * {
-    flex-basis: 35px;
+    min-width: 40px;
+    flex-basis: 40px;
     flex-grow: 1;
     padding: 10px;
 }

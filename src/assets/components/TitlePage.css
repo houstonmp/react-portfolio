@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 50px;
+    scroll-snap-align: start;
+    position: relative;
+    /* overflow-y: scroll; */
 }
 
 #tp-body header {

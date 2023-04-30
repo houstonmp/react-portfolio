@@ -1,11 +1,12 @@
 .side_bar {
-    position: absolute;
+    position: fixed;
     right: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     margin: 0 2%;
+    z-index: 2;
 }
 
 .dot {
@@ -15,6 +16,11 @@
     border-radius: 50%;
     display: inline-block;
     margin: .5rem 0;
+}
+
+.dot:hover {
+    cursor: pointer;
+    background-color: #004C93;
 }
 
 .active {
