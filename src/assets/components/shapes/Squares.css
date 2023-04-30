@@ -1,0 +1,40 @@
+.square_type_one {
+    position: fixed;
+    width: 15%;
+
+}
+
+.square_type_one * {
+    opacity: 0;
+    transition: all 3s;
+}
+
+.square-0 {
+    fill: white;
+    top: 5%;
+    left: 5%;
+
+}
+
+.square-0 * {
+    fill: white;
+}
+
+.square-1 {
+    top: 5%;
+    left: 5%;
+}
+
+.square-1 * {
+    fill: #D9D9D9;
+}
+
+.square-2 {
+    top: 30%;
+    left: 5%;
+}
+
+.square-2 * {
+    opacity: 1;
+    fill: #D9D9D9;
+}

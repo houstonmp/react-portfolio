@@ -12,9 +12,9 @@
 
 .carousel {
     /* width: 50%; */
-    flex-basis: 50%;
+    flex-basis: 60%;
     /* height: auto; */
-    height: 50vh;
+    height: 60vh;
     position: relative;
     display: flex;
     overflow: auto;

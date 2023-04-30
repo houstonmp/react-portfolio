@@ -27,12 +27,23 @@
 }
 
 .triangle-2 {
-    top: 20%;
-    left: 50%;
+    top: 10%;
+    left: 80%;
     /* transform: translate(50%, 50%); */
     will-change: transform;
 }
 
 .triangle-2 * {
-    fill: #0085FF;
+    fill: #D9D9D9;
+}
+
+.triangle-3 {
+    top: 20%;
+    left: 85%;
+    /* transform: translate(50%, 50%); */
+    will-change: transform;
+}
+
+.triangle-3 * {
+    fill: #D9D9D9;
 }

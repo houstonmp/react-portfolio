@@ -12,7 +12,7 @@ const TitlePage = (props) => {
     return (<>
         <section id="tp-body">
             <Title></Title>
-            <Shapes circleType={circleType} triangleType={triangleType} />
+            <Shapes circleType={circleType} triangleType={triangleType} isShown={props.isShown} />
             <Proficiencies isShown={isShown} />
         </section>
     </>);

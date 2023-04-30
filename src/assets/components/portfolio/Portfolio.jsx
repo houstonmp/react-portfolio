@@ -7,7 +7,7 @@ import tudor from '../../img/Tudo-r.png';
 import meteor from '../../img/image 7.png';
 
 const Portfolio = (props) => {
-    const { circleType, triangleType } = props;
+    const { circleType, triangleType, isShown } = props;
 
     return (
         <>
@@ -31,7 +31,7 @@ const Portfolio = (props) => {
 
                 </div>
 
-                <Shapes circleType={circleType} triangleType={triangleType} />
+                {/* <Shapes circleType={circleType} triangleType={triangleType} /> */}
             </section>
         </>
     );

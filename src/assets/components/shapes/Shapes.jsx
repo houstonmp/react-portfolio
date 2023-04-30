@@ -1,5 +1,6 @@
 import Triangle from "./Triangles"
 import Circle from "./Circles"
+import Square from './Squares';
 
 const Shapes = (props) => {
     const { triangleType, circleType } = props;
@@ -9,6 +10,9 @@ const Shapes = (props) => {
         <>
             <Triangle triangleType="triangle_type_one" trianglePlace={triangleType} />
             <Circle circleType="circle_type_one" circlePlace={circleType} />
+            {(props.isShown === 2) && <Square squareType="square_type_one" squarePlace="square-2" />}
+            {(props.isShown === 2) && <Triangle triangleType="triangle_type_one" trianglePlace="triangle-3" />}
+
             {/* <Triangle triangleType="triangle_type_one" trianglePlace="triangle-1" />
             <Triangle triangleType="triangle_type_one" trianglePlace="triangle-2" />
             <Triangle triangleType="triangle_type_one" trianglePlace="triangle-3" /> */}

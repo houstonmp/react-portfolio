@@ -90,7 +90,7 @@ function App() {
       <div className="container" onScroll={scrollHandler}>
         <TitlePage circleType={shapeType.circle} triangleType={shapeType.triangle} isShown={pageLocation} />
         <AboutMe />
-        <Portfolio />
+        <Portfolio isShown={pageLocation} />
         <ImportantLinks isDark={shapeType.isDark} />
         <SideBar pageLocation={pageLocation} isDark={shapeType.isDark} />
       </div>
