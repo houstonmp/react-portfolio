@@ -3,17 +3,30 @@
     height: 20vh;
 }
 
+.circle_type_one * {
+    transition: all 3s;
+}
+
+.circle-0 {
+    fill: white;
+    top: 5%;
+    left: 5%;
+}
+
+.circle-0 * {
+    fill: white;
+}
+
 .circle-1 {
     top: 5%;
     left: 5%;
 }
 
-.circle-2 {
-    top: 87%;
-    left: 18%;
+.circle-1 * {
+    fill: #D9D9D9;
 }
 
-.circle-3 {
+.circle-2 {
     top: 85%;
     left: 30%;
 }

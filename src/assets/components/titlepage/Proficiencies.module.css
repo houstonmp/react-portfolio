@@ -9,8 +9,14 @@
 }
 
 .prof_logo {
+    display: block;
     flex-basis: 60px;
     flex-grow: 1;
+    transition: all .85s ease-in;
+}
+
+.isInvisible {
+    opacity: 0;
 }
 
 .prof_logo::after {

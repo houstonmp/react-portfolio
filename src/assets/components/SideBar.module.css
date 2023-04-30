@@ -13,11 +13,18 @@
 .dot {
     height: 1.4rem;
     width: 1.4rem;
-    background-color: white;
     border-radius: 50%;
     display: inline-block;
     margin: .5rem 0;
-    transition: all 1s;
+    transition: all .75s;
+}
+
+.light {
+    background-color: white;
+}
+
+.dark {
+    background-color: #0085FF;
 }
 
 .dot:hover {
