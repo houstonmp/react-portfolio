@@ -114,7 +114,7 @@ function App() {
         <Portfolio pageLocation={pageLocation} />
         <ImportantLinks isDark={shapeType.isDark} />
         {isDisplay && <Shapes circleType={shapeType.circle} triangleType={shapeType.triangle} pageLocation={pageLocation} />}
-        {isDisplay && <SideBar pageLocation={pageLocation} isDark={shapeType.isDark} />}
+        {isDisplay && <SideBar id="sideBar" pageLocation={pageLocation} isDark={shapeType.isDark} scrollLength={sectionHeight} sectionNumber={sectionNumber} />}
 
       </div>
     </>

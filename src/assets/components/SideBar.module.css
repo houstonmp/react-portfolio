@@ -38,7 +38,13 @@
 
 .horizontal {
     position: relative;
+    bottom: 0;
     flex-direction: row;
     height: 2rem;
-    margin: 2% 0;
+    margin: 2% 2%;
+    flex-basis: 100%;
+}
+
+.horizontal * {
+    background-color: lightgrey;
 }
