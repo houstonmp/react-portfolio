@@ -5,27 +5,13 @@ import SideBar from './assets/components/SideBar';
 import AboutMe from './assets/components/aboutme/AboutMe'
 import ImportantLinks from './assets/components/ImportantLinks';
 import Portfolio from './assets/components/portfolio/Portfolio';
+import Shapes from './assets/components/shapes/Shapes'
 import './App.css'
 
 let docHeight = 0;
 let sectionHeight = 0;
 let sectionNumber = 3;
 
-function calculateSectionHeight() {
-  var htmlElement = document.documentElement;
-  var bodyElement = document.body;
-
-  var height = Math.max(
-    htmlElement.clientHeight, htmlElement.scrollHeight, htmlElement.offsetHeight,
-    bodyElement.scrollHeight, bodyElement.offsetHeight
-  );
-  docHeight = height;
-  sectionHeight = height / sectionNumber;
-}
-
-window.onload = calculateSectionHeight;
-
-window.onresize = calculateSectionHeight;
 
 function App() {
   let lastKnownScrollPosition = 0;
@@ -36,6 +22,30 @@ function App() {
     triangle: "triangle-0",
     isDark: false
   });
+  const [isDisplay, setDisplay] = useState(false);
+
+  function calculateSectionHeight() {
+    var htmlElement = document.documentElement;
+    var bodyElement = document.body;
+
+    var height = Math.max(
+      htmlElement.clientHeight, htmlElement.scrollHeight, htmlElement.offsetHeight,
+      bodyElement.scrollHeight, bodyElement.offsetHeight
+    );
+    docHeight = height;
+    sectionHeight = height / sectionNumber;
+    let viewWidth = document.body.getBoundingClientRect().width;
+    console.log("Width:", viewWidth);
+    if (viewWidth > 800) {
+      setDisplay(true);
+    } else {
+      setDisplay(false);
+    }
+  }
+
+  window.onload = calculateSectionHeight;
+
+  window.onresize = calculateSectionHeight;
   // const [changePageData, setPageData] = useState({
   //   shape: 0,
   //   link: 0,
@@ -43,17 +53,13 @@ function App() {
   // })
 
   function doSomething(scrollPos) {
-    console.log("Mouse Location:", scrollPos, sectionHeight, `${Math.round(scrollPos / sectionHeight)}`)
     // Do something with the scroll position
     if (Math.round(scrollPos / sectionHeight) === (0 * sectionNumber)) {
-      // console.log("Mouse Location:", scrollPos, sectionHeight, `${Math.round(scrollPos / sectionHeight)}`)
       setLocation(0); //page 1
     } else if (Math.round(scrollPos / sectionHeight) === (1 * sectionNumber)) {
-      // console.log("Mouse Location:", scrollPos, sectionHeight, `${Math.round(scrollPos / sectionHeight)}`);
 
       setLocation(1);//page 2
     } else if (Math.round(scrollPos / sectionHeight) === (2 * sectionNumber)) {
-      // console.log("Mouse Location:", scrollPos, sectionHeight, `${Math.round(scrollPos / sectionHeight)}`);
       setLocation(2);
     }
   }
@@ -103,11 +109,13 @@ function App() {
   return (
     <>
       <div className="container" onScroll={scrollHandler}>
-        <TitlePage circleType={shapeType.circle} triangleType={shapeType.triangle} isShown={pageLocation} />
+        <TitlePage pageLocation={pageLocation} />
         <AboutMe />
-        <Portfolio isShown={pageLocation} />
+        <Portfolio pageLocation={pageLocation} />
         <ImportantLinks isDark={shapeType.isDark} />
-        <SideBar pageLocation={pageLocation} isDark={shapeType.isDark} />
+        {isDisplay && <Shapes circleType={shapeType.circle} triangleType={shapeType.triangle} pageLocation={pageLocation} />}
+        {isDisplay && <SideBar pageLocation={pageLocation} isDark={shapeType.isDark} />}
+
       </div>
     </>
   )

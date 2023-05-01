@@ -38,3 +38,24 @@
     opacity: 1;
     fill: #D9D9D9;
 }
+
+@media only screen and (min-width: 0px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .square-type-one {
+        display: none;
+    }
+
+    /* 
+    .square-1 * {
+        fill: #004C93;
+    } */
+
+    /* .square-2 * {
+        fill: #004C93;
+    } */
+}

@@ -35,3 +35,10 @@
 .active {
     background-color: #bbb;
 }
+
+.horizontal {
+    position: relative;
+    flex-direction: row;
+    height: 2rem;
+    margin: 2% 0;
+}

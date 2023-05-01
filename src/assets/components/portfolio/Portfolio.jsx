@@ -1,13 +1,13 @@
 import styles from "./Portfolio.module.css";
-import Shapes from "../shapes/Shapes"
 import yeti from '../../img/Yeti.png';
 import shark from '../../img/image 6.png';
 import weight from '../../img/weight.png';
 import tudor from '../../img/Tudo-r.png';
 import meteor from '../../img/image 7.png';
+import SideBar from "../SideBar";
 
 const Portfolio = (props) => {
-    const { circleType, triangleType, isShown } = props;
+    // document.getElementsByClassName('.carousel').scrollWidth;
 
     return (
         <>
@@ -30,6 +30,7 @@ const Portfolio = (props) => {
                     </a>
 
                 </div>
+                <SideBar isDark={true} type="horizontal" />
 
                 {/* <Shapes circleType={circleType} triangleType={triangleType} /> */}
             </section>

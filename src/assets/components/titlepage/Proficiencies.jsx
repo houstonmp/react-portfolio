@@ -3,13 +3,12 @@ import React from '../../img/React'
 // import Node from ''
 
 const Proficiencies = (props) => {
-    const { isShown } = props;
-    console.log("osShown", isShown);
+    const { pageLocation } = props;
 
     return (
         <>
             <div className={`${styles.prof_container}`}>
-                <React logoType={`${styles.prof_logo} ${isShown && styles.isInvisible}`} />
+                <React logoType={`${styles.prof_logo} ${pageLocation && styles.isInvisible}`} />
             </div>
             {/* < */}
         </>
