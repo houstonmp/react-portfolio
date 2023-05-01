@@ -1,5 +1,3 @@
-import styles from './Squares.css';
-
 const Square = (props) => {
     const { squareType, squarePlace } = props;
 

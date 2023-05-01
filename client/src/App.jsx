@@ -6,11 +6,12 @@ import AboutMe from './assets/components/aboutme/AboutMe'
 import ImportantLinks from './assets/components/ImportantLinks';
 import Portfolio from './assets/components/portfolio/Portfolio';
 import Shapes from './assets/components/shapes/Shapes'
+import ContactForm from './assets/components/contact/ContactForm'
 import './App.css'
 
 let docHeight = 0;
 let sectionHeight = 0;
-let sectionNumber = 3;
+let sectionNumber = 4;
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
     );
     docHeight = height;
     sectionHeight = height / sectionNumber;
+
     let viewWidth = document.body.getBoundingClientRect().width;
     console.log("Width:", viewWidth);
     if (viewWidth > 800) {
@@ -57,10 +59,12 @@ function App() {
     if (Math.round(scrollPos / sectionHeight) === (0 * sectionNumber)) {
       setLocation(0); //page 1
     } else if (Math.round(scrollPos / sectionHeight) === (1 * sectionNumber)) {
-
       setLocation(1);//page 2
     } else if (Math.round(scrollPos / sectionHeight) === (2 * sectionNumber)) {
       setLocation(2);
+    }
+    else if (Math.round(scrollPos / sectionHeight) === (3 * sectionNumber)) {
+      setLocation(3);
     }
   }
 
@@ -89,6 +93,13 @@ function App() {
           isDark: true
         });
       }
+      else if (pageLocation === 3) {
+        setShape({
+          circle: "circle-2",
+          triangle: "triangle-2",
+          isDark: false
+        });
+      }
     }
     , [pageLocation]
   )
@@ -115,6 +126,7 @@ function App() {
         <ImportantLinks isDark={shapeType.isDark} />
         {isDisplay && <Shapes circleType={shapeType.circle} triangleType={shapeType.triangle} pageLocation={pageLocation} />}
         {isDisplay && <SideBar id="sideBar" pageLocation={pageLocation} isDark={shapeType.isDark} scrollLength={sectionHeight} sectionNumber={sectionNumber} />}
+        <ContactForm />
 
       </div>
     </>

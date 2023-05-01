@@ -12,7 +12,6 @@ const SideBar = (props) => {
             if (event.target === spanList[i]) {
                 targetValue = i;
             }
-
         }
 
         let scrollValue = targetValue * scrollLength * sectionNumber;
@@ -31,8 +30,8 @@ const SideBar = (props) => {
                 <span value="1" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 1) && styles.active}`}></span>
                 <span value="2" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 2) && styles.active}`}></span>
                 <span value="3" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 3) && styles.active}`}></span>
-                <span value="4" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 4) && styles.active}`}></span>
-                <span value="5" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 5) && styles.active}`}></span>
+                {/* <span value="4" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 4) && styles.active}`}></span>
+                <span value="5" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 5) && styles.active}`}></span> */}
             </div >
         </>
     );

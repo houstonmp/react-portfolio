@@ -30,7 +30,7 @@ const Portfolio = (props) => {
                     </a>
 
                 </div>
-                <SideBar isDark={true} type="horizontal" />
+                {/* <SideBar isDark={true} type="horizontal" /> */}
 
                 {/* <Shapes circleType={circleType} triangleType={triangleType} /> */}
             </section>
