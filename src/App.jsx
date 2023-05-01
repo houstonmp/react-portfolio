@@ -9,10 +9,23 @@ import './App.css'
 
 let docHeight = 0;
 let sectionHeight = 0;
+let sectionNumber = 3;
 
-window.onload = () => {
-  sectionHeight = document.body.scrollHeight;
-};
+function calculateSectionHeight() {
+  var htmlElement = document.documentElement;
+  var bodyElement = document.body;
+
+  var height = Math.max(
+    htmlElement.clientHeight, htmlElement.scrollHeight, htmlElement.offsetHeight,
+    bodyElement.scrollHeight, bodyElement.offsetHeight
+  );
+  docHeight = height;
+  sectionHeight = height / sectionNumber;
+}
+
+window.onload = calculateSectionHeight;
+
+window.onresize = calculateSectionHeight;
 
 function App() {
   let lastKnownScrollPosition = 0;
@@ -30,15 +43,17 @@ function App() {
   // })
 
   function doSomething(scrollPos) {
+    console.log("Mouse Location:", scrollPos, sectionHeight, `${Math.round(scrollPos / sectionHeight)}`)
     // Do something with the scroll position
-    if (scrollPos >= 0 && scrollPos < sectionHeight) {
-
+    if (Math.round(scrollPos / sectionHeight) === (0 * sectionNumber)) {
+      // console.log("Mouse Location:", scrollPos, sectionHeight, `${Math.round(scrollPos / sectionHeight)}`)
       setLocation(0); //page 1
-    } else if ((scrollPos + 50) >= sectionHeight && scrollPos < (sectionHeight * 2)) {
+    } else if (Math.round(scrollPos / sectionHeight) === (1 * sectionNumber)) {
+      // console.log("Mouse Location:", scrollPos, sectionHeight, `${Math.round(scrollPos / sectionHeight)}`);
 
       setLocation(1);//page 2
-    } else if ((scrollPos + 50) >= (sectionHeight * 2) && scrollPos < (sectionHeight * 3)) {
-
+    } else if (Math.round(scrollPos / sectionHeight) === (2 * sectionNumber)) {
+      // console.log("Mouse Location:", scrollPos, sectionHeight, `${Math.round(scrollPos / sectionHeight)}`);
       setLocation(2);
     }
   }
