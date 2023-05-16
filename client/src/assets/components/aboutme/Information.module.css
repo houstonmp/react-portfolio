@@ -5,7 +5,7 @@
     flex-wrap: wrap;
     height: 60%;
     width: 100%;
-    margin: 30% 15%;
+    /* margin: 30% 15%; */
 }
 
 .information * {
@@ -16,7 +16,7 @@
     min-width: 100%;
     color: #004C93;
     font-weight: 100;
-    font-size: 7rem;
+    font-size: 3rem;
     margin: 0;
     text-align: right;
     padding-right: 15%;
@@ -29,24 +29,29 @@
     /* padding-right: 15%; */
     /* padding: 3rem; */
     /* margin: 0 50%; */
-    display: flex;
+    display: none;
     justify-content: flex-end;
     border-radius: 50%;
     max-height: 100%;
     height: auto;
     margin-left: 5%;
+    max-width: 30%;
 }
 
 .info_text {
     flex-grow: 2;
     max-width: 60%;
+    /* max-height: 40vh; */
     background-color: #F1F1F1;
     font-size: 1.2rem;
     font-style: italic;
-    margin: 8rem 8% 8rem 5%;
+    height: fit-content;
+    margin: 0 8% 0 5%;
     padding: .5rem 1rem;
     position: relative;
     line-height: 1.7rem;
+    align-self: center;
+
 }
 
 .blueBar {
@@ -58,7 +63,8 @@
     width: 150%;
 }
 
-@media only screen and (max-width: 800px) {
+
+@media only screen and (max-width: 650px) {
     .info_img {
         display: none;
         /* width: 80%;
@@ -66,13 +72,28 @@
         height: auto; */
     }
 
+    .info_text {
+        margin: 0;
+        /* max-height: 4rem; */
+        align-self: auto;
+        /* top: -15%; */
+    }
+
+    .blueBar {
+        top: 10px;
+    }
+}
+
+@media only screen and (min-width: 950px) {
+
     .title {
         font-size: 3rem;
     }
+}
 
-    .info_text {
-        margin: 0;
-        /* top: -15%; */
+@media only screen and (min-width: 1400px) {
+    .info_img {
+        display: flex;
     }
 }
 
@@ -102,7 +123,7 @@
     }
 
 
-    .info_text {
+    .info_text {;
         border-radius: 100%;
         background-color: #F1F1F1;
         font-size: 1.2rem;

@@ -12,6 +12,7 @@ const Portfolio = (props) => {
     return (
         <>
             <section className={styles.portfolio}>
+                <h1 className={styles.portfolioTitle}>Portfolio</h1>
                 <div className={styles.carousel}>
                     <a href="https://yetijapan.com/" target="_blank">
                         <img src={yeti} alt="Yeti Japan" />
