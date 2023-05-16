@@ -46,6 +46,7 @@
     margin: 8rem 8% 8rem 5%;
     padding: .5rem 1rem;
     position: relative;
+    line-height: 1.7rem;
 }
 
 .blueBar {
@@ -59,9 +60,10 @@
 
 @media only screen and (max-width: 800px) {
     .info_img {
-        width: 80%;
+        display: none;
+        /* width: 80%;
         margin: 0 10%;
-        height: auto;
+        height: auto; */
     }
 
     .title {
@@ -70,7 +72,7 @@
 
     .info_text {
         margin: 0;
-        top: -15%;
+        /* top: -15%; */
     }
 }
 

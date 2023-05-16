@@ -6,10 +6,8 @@
     flex-direction: row;
     justify-content: center;
     /* align-items: center; */
-
     gap: 50px;
     scroll-snap-align: start;
-
 }
 
 .contact-section {
@@ -48,12 +46,15 @@
     flex-shrink: 1;
     border-radius: 10px;
     border: none;
+    padding: 5px;
+    padding-left: 18px;
 }
 
 .contact-form-message {
     flex-basis: 50%;
     flex-shrink: 3;
     font-family: inherit;
+    padding: 18px;
 }
 
 .contact-form-btn {
@@ -66,4 +67,10 @@
 
 .contact-form-btn:hover {
     background-color: #cce5f9;
+}
+
+@media only screen and (max-width: 800px) {
+    .contact-section {
+        flex-basis: 90%;
+    }
 }

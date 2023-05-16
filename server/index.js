@@ -9,7 +9,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 async function mainMail(name, email, subject, message) {
-    console.log("Your email / password are:", process.env.GMAIL_USER, process.env.PASSWORD);
 
     const transporter = await nodeMail.createTransport({
         service: "gmail",
@@ -17,11 +16,15 @@ async function mainMail(name, email, subject, message) {
             user: process.env.GMAIL_USER,
             pass: process.env.PASSWORD,
         },
+        tls: {
+            // do not fail on invalid certs
+            rejectUnauthorized: false,
+        },
     });
     const mailOption = {
-        from: email,
+        from: process.env.GMAIL_USER,
         to: process.env.GMAIL_USER,
-        subject: subject,
+        subject: "New Contact Form Submission:" + subject,
         html: `
               <p>Name: ${name}</p>
               <p>Email : ${email}</p>
@@ -31,7 +34,7 @@ async function mainMail(name, email, subject, message) {
     };
     try {
         await transporter.sendMail(mailOption);
-        return Promise.resolve("Message Sent Successfully!");
+        return Promise.resolve("Message Sent Successfully! I'll try to get back to you as soon as possible!");
     } catch (error) {
         return Promise.reject(error);
     }
@@ -50,7 +53,7 @@ app.post("/contact", async (req, res, next) => {
     try {
         await mainMail(yourname, youremail, yoursubject, yourmessage);
 
-        res.send("Message Successfully Sent!");
+        res.send("Message Sent Successfully! I'll try to get back to you as soon as possible!");
     } catch (error) {
         console.log(error);
         res.send(`Message Could not be Sent: ${error}`);
