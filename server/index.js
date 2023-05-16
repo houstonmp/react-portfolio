@@ -8,23 +8,19 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
-
-
 async function mainMail(name, email, subject, message) {
+    console.log("Your email / password are:", process.env.GMAIL_USER, process.env.PASSWORD);
 
     const transporter = await nodeMail.createTransport({
         service: "gmail",
-        host: 'host',
-        port: 25,
-        secure: false,
         auth: {
             user: process.env.GMAIL_USER,
             pass: process.env.PASSWORD,
         },
     });
     const mailOption = {
-        from: process.env.GMAIL_USER,
-        to: process.env.EMAIL,
+        from: `${email}`,
+        to: process.env.GMAIL_USER,
         subject: subject,
         html: `You got a message from 
     Email : ${email}
@@ -54,7 +50,8 @@ app.post("/contact", async (req, res, next) => {
 
         res.send("Message Successfully Sent!");
     } catch (error) {
-        res.send(error);
+        console.log(error);
+        res.send(`Message Could not be Sent: ${error}`);
     }
 });
 
