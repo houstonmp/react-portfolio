@@ -28,13 +28,13 @@
     flex-basis: 60%;
     /* height: auto; */
     height: 60vh;
-    position: relative;
+    /* position: relative; */
     display: flex;
     scroll-snap-type: x mandatory;
     border-radius: 10px;
     overflow-y: hidden;
     overflow-x: overlay;
-    z-index: 6;
+    z-index: 4;
     border: 3px solid #004C93;
 
 
@@ -64,9 +64,31 @@
     position: sticky;
     left: 0;
     flex-shrink: 0;
-
     scroll-snap-align: start;
     cursor: pointer;
+
+}
+
+.carousel:hover img {}
+
+.carousel h2 {
+    position: absolute;
+    bottom: 5%;
+    right: 10%;
+    width: 30%;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    color: #004C93;
+    opacity: 0;
+    transition: all 1s ease-in;
+}
+
+.carousel a:hover h2 {
+    -webkit-box-shadow: 1px 0px 26px -7px rgba(74, 82, 115, 0.19);
+    -moz-box-shadow: 1px 0px 26px -7px rgba(74, 82, 115, 0.19);
+    box-shadow: 1px 0px 26px -7px rgba(74, 82, 115, 0.19);
+    opacity: 1;
 }
 
 a img {

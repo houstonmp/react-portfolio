@@ -15,18 +15,23 @@ const Portfolio = (props) => {
                 <h1 className={styles.portfolioTitle}>Portfolio</h1>
                 <div className={styles.carousel}>
                     <a href="https://yetijapan.com/" target="_blank">
+                        <h2>YETI Japan</h2>
                         <img src={yeti} alt="Yeti Japan" />
                     </a>
                     <a href="https://chimerical-puppy-f8d0d5.netlify.app/" target="_blank">
+                        <h2>PoolShark</h2>
                         <img src={shark} alt="Pool Shark" />
                     </a>
                     <a href="https://adorable-twilight-fb881c.netlify.app/" target="_blank">
+                        <h2>Health Tracker</h2>
                         <img src={weight} alt="" />
                     </a>
                     <a href="https://lustrous-bublanina-b8b4b7.netlify.app/" target="_blank">
+                        <h2>Tudo[r]</h2>
                         <img src={tudor} alt="" />
                     </a>
                     <a href="https://frabjous-biscuit-20fc2a.netlify.app/" target="_blank">
+                        <h2>Meteor Weather</h2>
                         <img src={meteor} alt="" />
                     </a>
 
