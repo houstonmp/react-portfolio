@@ -122,7 +122,7 @@ function App() {
       <div className="container" onScroll={scrollHandler}>
         <TitlePage pageLocation={pageLocation} />
         <AboutMe />
-        <Portfolio pageLocation={pageLocation} />
+        <Portfolio />
         <ImportantLinks isDark={shapeType.isDark} />
         {isDisplay && <Shapes circleType={shapeType.circle} triangleType={shapeType.triangle} pageLocation={pageLocation} />}
         {isDisplay && <SideBar id="sideBar" pageLocation={pageLocation} isDark={shapeType.isDark} scrollLength={sectionHeight} sectionNumber={sectionNumber} />}

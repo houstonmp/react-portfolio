@@ -30,7 +30,9 @@
     height: 60vh;
     /* position: relative; */
     display: flex;
+    /* scroll-snap-type: x mandatory; */
     scroll-snap-type: x mandatory;
+    /* scroll-snap-stop: always; */
     border-radius: 10px;
     overflow-y: hidden;
     overflow-x: overlay;
@@ -66,10 +68,9 @@
     flex-shrink: 0;
     scroll-snap-align: start;
     cursor: pointer;
-
 }
 
-.carousel:hover img {}
+/* .carousel:hover img {} */
 
 .carousel h2 {
     position: absolute;

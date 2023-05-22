@@ -48,6 +48,10 @@ app.get("/contact", (req, res) => {
     res.render(index.html);
 });
 
+app.get('*', function (req, res) {
+    res.status(404).render(index.html);
+});
+
 app.post("/contact", async (req, res, next) => {
     const { yourname, youremail, yoursubject, yourmessage } = req.body;
     try {
