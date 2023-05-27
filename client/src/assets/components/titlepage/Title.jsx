@@ -5,7 +5,7 @@ const Title = () => {
                 Hi, I'm Matthew!
             </h1>
             <h2 className="sub-Title">
-                Jr. Front End Web Developer
+                Front End Web Developer
             </h2>
         </header>
     </>);
