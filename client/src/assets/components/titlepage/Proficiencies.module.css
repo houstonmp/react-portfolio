@@ -2,9 +2,14 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 10%;
+    width: 50%;
     display: flex;
+    justify-content: space-around;
+    /* max-height: 5vh; */
+    max-width: 30%;
+    max-height: 150px;
     margin: 5%;
+    /* margin: 10px; */
     flex-direction: row;
 }
 
@@ -13,6 +18,7 @@
     flex-basis: 60px;
     flex-grow: 1;
     transition: all .85s ease-in;
+    /* max-width: 10%; */
 }
 
 .isInvisible {
