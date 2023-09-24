@@ -33,4 +33,5 @@ Blue is my favorite color so I used a simple monochromatic color palette with se
 ## Acknowledgements
 
  - [README Generated with readme.so](https://readme.so/editor)
+[![Analytics](https://ga-beacon.appspot.com/G-R169L11ERF/chromeskel_a/readme)](https://github.com/houstonmp/react-portfolio)
 
