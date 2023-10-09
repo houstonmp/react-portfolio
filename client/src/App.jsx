@@ -8,10 +8,11 @@ import Portfolio from './assets/components/portfolio/Portfolio';
 import Shapes from './assets/components/shapes/Shapes'
 import ContactForm from './assets/components/contact/ContactForm'
 import './App.css'
+import TechStack from './assets/components/techstack/TechStack';
 
 let docHeight = 0;
 let sectionHeight = 0;
-let sectionNumber = 4;
+let sectionNumber = 5;
 
 
 function App() {
@@ -66,6 +67,9 @@ function App() {
     else if (Math.round(scrollPos / sectionHeight) === (3 * sectionNumber)) {
       setLocation(3);
     }
+    else if (Math.round(scrollPos / sectionHeight) === (4 * sectionNumber)) {
+      setLocation(4);
+    }
   }
 
 
@@ -112,7 +116,6 @@ function App() {
         doSomething(lastKnownScrollPosition);
         ticking = false;
       });
-
       ticking = true;
     }
   }
@@ -122,12 +125,12 @@ function App() {
       <div className="container" onScroll={scrollHandler}>
         <TitlePage pageLocation={pageLocation} />
         <AboutMe />
+        <TechStack />
         <Portfolio />
         <ImportantLinks isDark={shapeType.isDark} />
         {isDisplay && <Shapes circleType={shapeType.circle} triangleType={shapeType.triangle} pageLocation={pageLocation} />}
         {isDisplay && <SideBar id="sideBar" pageLocation={pageLocation} isDark={shapeType.isDark} scrollLength={sectionHeight} sectionNumber={sectionNumber} />}
         <ContactForm />
-
       </div>
     </>
   )
