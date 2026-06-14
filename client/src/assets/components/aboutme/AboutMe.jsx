@@ -7,9 +7,7 @@ const AboutMe = () => {
     return (
         <>
             <section id={styles.am_body}>
-                <Shapes />
                 <Information />
-                <ImportantLinks />
             </section>
         </>
     );
