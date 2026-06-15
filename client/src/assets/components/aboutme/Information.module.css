@@ -25,10 +25,11 @@
 
 .info_img {
     /* flex-basis: 30%; */
-    flex-grow: 1;
+    /* flex-grow: 1; */
     /* padding-right: 15%; */
     /* padding: 3rem; */
     /* margin: 0 50%; */
+    aspect-ratio: 1/1;
     display: none;
     justify-content: flex-end;
     border-radius: 50%;

@@ -29,11 +29,11 @@
 
 .dot:hover {
     cursor: pointer;
-    background-color: #004C93;
+    background-color: #9dc5e7;
 }
 
 .active {
-    background-color: #bbb;
+    background-color: #CE1B4B;
 }
 
 .horizontal {

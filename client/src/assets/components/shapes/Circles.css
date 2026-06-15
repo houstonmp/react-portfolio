@@ -24,7 +24,7 @@
 }
 
 .circle-1 * {
-    fill: #D9D9D9;
+    fill: #C4E3FF;
 }
 
 .circle-2 {
@@ -34,7 +34,7 @@
 
 .circle-2 * {
     /* opacity: 1; */
-    fill: #D9D9D9;
+    fill: #C4E3FF;
 }
 
 /* Extra small devices (phones, 600px and down) */

@@ -13,7 +13,7 @@ const Portfolio = (props) => {
     return (
         <>
             <section className={styles.portfolio}>
-                <h1 className={styles.portfolioTitle}>Portfolio</h1>
+                <h1 className={styles.portfolioTitle}>My Work</h1>
                 <div className={styles.carousel}>
                     <a href="https://yetijapan.com/" target="_blank">
                         <h2>YETI Japan</h2>
