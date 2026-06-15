@@ -2,80 +2,151 @@
     width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-content: center;
-    /* padding: 30% 0; */
-    gap: 50px;
+    flex-direction: row;
     scroll-snap-align: start;
-    flex-wrap: wrap;
-    /* overflow-x: scroll; */
+    overflow: hidden;
+}
 
+/* ── Sidebar ── */
+.sidebar {
+    flex-basis: 20%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10vh 2rem;
+    background-color: #0085FE;
+    overflow: hidden;
 }
 
 .portfolioTitle {
-    min-width: 100%;
-    color: #004C93;
+    color: white;
     font-weight: 100;
     font-size: 3rem;
-    margin: 0;
-    text-align: left;
-    padding-left: 15%;
-    z-index: 4;
+    margin: 0 0 2rem 0;
 }
 
-.carousel {
-    /* width: 50%; */
-    flex-basis: 60%;
-    /* height: auto; */
-    height: 60vh;
-    /* position: relative; */
+/* ── Project List ── */
+.projectList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    /* scroll-snap-type: x mandatory; */
-    scroll-snap-type: x mandatory;
-    /* scroll-snap-stop: always; */
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.projectList li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.arrowSlot {
+    width: 24px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    display: block;
+}
+
+.projectBtn {
+    flex: 1;
+    background-color: white;
+    border: none;
     border-radius: 10px;
+    color: #0085FE;
+    font-size: 1.1rem;
+    font-weight: 300;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-family: inherit;
+    transition: color 0.3s ease;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.projectBtn:hover {
+    color: #004C93;
+}
+
+.projectList li.active .projectBtn {
+    color: #CE1B4B;
+    font-weight: 700;
+}
+
+.badge {
+    background-color: #CE1B4B;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 50px;
+}
+
+/* ── Carousel ── */
+.carousel {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
     overflow-y: hidden;
-    overflow-x: overlay;
     z-index: 4;
-    border: 3px solid #004C93;
-
-
-    /* transition: transform 1s, box-shadow 1s ease-in; */
-    /* box-shadow: -5px 5px 4px #D9D9D9; */
-
 }
 
 .carousel::-webkit-scrollbar {
     background: #004c9327;
     display: block;
-    height: .7rem;
-    padding-bottom: .5rem;
-    /* transform: rotate3d(0, 0, 1, 2deg); */
+    height: 0.7rem;
 }
 
 .carousel::-webkit-scrollbar-thumb {
     background: #004C93;
     display: block;
-    margin-bottom: .5rem;
-    /* transform: rotate3d(0, 0, 1, 2deg); */
 }
 
 .carousel a {
     width: 100%;
     height: 100%;
-    position: sticky;
-    left: 0;
+    position: relative;
     flex-shrink: 0;
     scroll-snap-align: start;
     cursor: pointer;
 }
 
-/* .carousel:hover img {} */
+.carousel a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 92, 179, 0.3);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.carousel a:hover::after {
+    opacity: 1;
+}
+
+.carousel a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #f1f1f1;
+}
 
 .carousel h2 {
     position: absolute;
     bottom: 5%;
-    right: 10%;
+    left: 10%;
     width: 30%;
     border-radius: 10px;
     text-align: center;
@@ -83,36 +154,26 @@
     color: #004C93;
     opacity: 0;
     transition: all 1s ease-in;
+    z-index: 2;
 }
 
 .carousel a:hover h2 {
-    -webkit-box-shadow: 1px 0px 26px -7px rgba(74, 82, 115, 0.19);
-    -moz-box-shadow: 1px 0px 26px -7px rgba(74, 82, 115, 0.19);
     box-shadow: 1px 0px 26px -7px rgba(74, 82, 115, 0.19);
     opacity: 1;
 }
 
-a img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-@media only screen and (min-width: 0px) {}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {}
-
-/* Medium devices (landscape tablets, 768px and up) */
+/* ── Responsive ── */
 @media only screen and (max-width: 768px) {
-
-    .carousel {
-        flex-basis: 80%;
-        /* height: 6vh; */
-        /* z-index: -1; */
+    .portfolio {
+        flex-direction: column;
     }
 
-    a img {
-        object-fit: cover;
+    .sidebar {
+        flex-basis: auto;
+        padding: 2rem;
+    }
+
+    .carousel {
+        flex: 1;
     }
 }

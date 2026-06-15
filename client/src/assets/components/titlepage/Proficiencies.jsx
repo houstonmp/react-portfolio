@@ -1,5 +1,5 @@
 import styles from './Proficiencies.module.css'
-import { React, Redux } from '../../img/React'
+import { React, Redux, Tailwind, JavaScript } from '../../img/React'
 // import Node from ''
 
 const Proficiencies = (props) => {
@@ -10,6 +10,8 @@ const Proficiencies = (props) => {
             <div className={`${styles.prof_container}`}>
                 <React logoType={`${styles.prof_logo} ${pageLocation && styles.isInvisible}`} />
                 <Redux logoType={`${styles.prof_logo} ${pageLocation && styles.isInvisible}`} />
+                <Tailwind logoType={`${styles.prof_logo} ${pageLocation && styles.isInvisible}`} />
+                <JavaScript logoType={`${styles.prof_logo} ${pageLocation && styles.isInvisible}`} />
             </div>
         </>
     );

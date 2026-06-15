@@ -14,7 +14,7 @@ const SideBar = (props) => {
             }
         }
 
-        let scrollValue = targetValue * scrollLength * sectionNumber;
+        let scrollValue = targetValue * scrollLength;
         console.log('Scrolling:', scrollValue, targetValue);
         container.scrollTo({
             top: scrollValue,
