@@ -3,16 +3,16 @@ import styles from "./Portfolio.module.css";
 import yeti from '../../img/Yeti.png';
 import shark from '../../img/image 6.png';
 import button from '../../img/Button.png'
-import tudor from '../../img/Tudo-r.png';
+import tudor from '../../img/tudor-preview.png';
 import meteor from '../../img/image 7.png';
 import fitpad from '../../img/FitPad.png';
 
 const projects = [
     { title: "FitPad Health App", href: "https://successful-fog-b5ad98.netlify.app/signin", img: fitpad, alt: "FitPad" },
-    { title: "YETI Japan", href: "https://yetijapan.com/", img: yeti, alt: "Yeti Japan" },
-    { title: "PoolShark", href: "https://chimerical-puppy-f8d0d5.netlify.app/", img: shark, alt: "Pool Shark" },
-    { title: "Hold the Button", href: "https://merry-unicorn-c978d5.netlify.app/", img: button, alt: "" },
-    { title: "Tudo[r]", href: "https://lustrous-bublanina-b8b4b7.netlify.app/", img: tudor, alt: "" },
+    { title: "YETI Japan", href: "/yeti/", img: yeti, alt: "Yeti Japan" },
+    { title: "PoolShark", href: "https://chimerical-puppy-f8d0d5.netlify.app/", img: shark, alt: "Pool Shark - A Classic game of Tic-Tac-Toe" },
+    { title: "Button Wrangler", href: "https://merry-unicorn-c978d5.netlify.app/", img: button, alt: "Button Wrangler - A Hold the Button Game" },
+    { title: "Tudo[r]", href: "https://tudor-app-b8b4b7.netlify.app/", img: tudor, alt: "Tudor - Ye old todo list" },
     // { title: "Meteor Weather", href: "https://frabjous-biscuit-20fc2a.netlify.app/", img: meteor, alt: "", badge: "AI" },
 ];
 
