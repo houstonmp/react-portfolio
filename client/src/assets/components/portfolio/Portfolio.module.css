@@ -25,6 +25,15 @@
     font-size: 3rem;
     margin: 0 0 2rem 0;
 }
+.separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+aside p {
+    margin: 30px 20px;
+}
 
 /* ── Project List ── */
 .projectList {
@@ -143,21 +152,22 @@
     background-color: #f1f1f1;
 }
 
-.carousel h2 {
+.projectDesc {
     position: absolute;
-    bottom: 5%;
-    left: 10%;
-    width: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
     border-radius: 10px;
     text-align: center;
-    background-color: white;
-    color: #004C93;
+    background-color: #f1f1f1;
+    color: black;
     opacity: 0;
     transition: all 1s ease-in;
     z-index: 2;
 }
 
-.carousel a:hover h2 {
+.carousel a:hover .projectDesc {
     box-shadow: 1px 0px 26px -7px rgba(74, 82, 115, 0.19);
     opacity: 1;
 }
