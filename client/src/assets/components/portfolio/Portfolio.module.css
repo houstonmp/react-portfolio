@@ -172,18 +172,53 @@ aside p {
     opacity: 1;
 }
 
-/* ── Responsive ── */
-@media only screen and (max-width: 768px) {
+.infoBtn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 3;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(0, 76, 147, 0.75);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.infoBtn:hover {
+    background-color: rgba(0, 76, 147, 0.95);
+}
+
+.projectDesc.infoOpen {
+    opacity: 1;
+    box-shadow: 1px 0px 26px -7px rgba(74, 82, 115, 0.19);
+}
+
+@media only screen and (max-width: 800px) {
     .portfolio {
         flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        scroll-snap-align: none;
     }
 
     .sidebar {
-        flex-basis: auto;
-        padding: 2rem;
+        display: none;
     }
 
     .carousel {
-        flex: 1;
+        flex: 0 0 70vh;
+        width: 100%;
+        flex-basis: 100vh;
+    }
+
+    .carousel a {
+        flex-basis: 100%;
+    }
+    .projectDesc {
+      width: 80%;
     }
 }

@@ -31,3 +31,9 @@
     bottom: 0;
     text-align: center;
 }
+
+@media only screen and (max-width: 800px) {
+    .prof_container {
+        width: 50%;
+    }
+}

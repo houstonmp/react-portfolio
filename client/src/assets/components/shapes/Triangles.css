@@ -48,6 +48,15 @@
     fill: #C4E3FF;
 }
 
+.triangle-4 {
+    top: 82%;
+    left: 64%;
+}
+
+.triangle-4 * {
+    fill: #C4E3FF;
+}
+
 @media only screen and (min-width: 0px) {}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */

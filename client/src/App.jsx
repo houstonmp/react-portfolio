@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import TitlePage from './assets/components/titlepage/TitlePage';
 import SideBar from './assets/components/SideBar';
 import AboutMe from './assets/components/aboutme/AboutMe'
+import Timeline from './assets/components/timeline/Timeline'
 import ImportantLinks from './assets/components/ImportantLinks';
 import Portfolio from './assets/components/portfolio/Portfolio';
 import Shapes from './assets/components/shapes/Shapes'
@@ -11,7 +12,7 @@ import './App.css'
 
 let docHeight = 0;
 let sectionHeight = window.innerHeight;
-let sectionNumber = 4;
+let sectionNumber = 5; // was 4 — TitlePage, AboutMe, Timeline, Portfolio, ContactForm
 
 
 function App() {
@@ -49,6 +50,8 @@ function App() {
       setLocation(2);
     } else if (Math.round(scrollPos / sectionHeight) === 3) {
       setLocation(3);
+    } else if (Math.round(scrollPos / sectionHeight) === 4) {
+      setLocation(4);
     }
   }
 
@@ -67,11 +70,17 @@ function App() {
       });
     } else if (pageLocation === 2) {
       setShape({
+        circle: "circle-3",
+        triangle: "triangle-0",
+        isDark: true
+      });
+    } else if (pageLocation === 3) {
+      setShape({
         circle: "circle-2",
         triangle: "triangle-2",
         isDark: true
       });
-    } else if (pageLocation === 3) {
+    } else if (pageLocation === 4) {
       setShape({
         circle: "circle-2",
         triangle: "triangle-2",
@@ -81,6 +90,7 @@ function App() {
   }, [pageLocation]);
 
   const scrollHandler = (event) => {
+    if (!isDisplay) return; // mobile: no scroll-driven section tracking needed
     lastKnownScrollPosition = event.target.scrollTop || document.body.scrollTop;
 
     if (!ticking) {
@@ -97,6 +107,7 @@ function App() {
       <div className="container" onScroll={scrollHandler}>
         <TitlePage pageLocation={pageLocation} />
         <AboutMe />
+        <Timeline />
         <Portfolio />
         <ImportantLinks isDark={shapeType.isDark} />
         {isDisplay && <Shapes circleType={shapeType.circle} triangleType={shapeType.triangle} pageLocation={pageLocation} />}

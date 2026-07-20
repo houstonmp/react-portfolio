@@ -1,0 +1,153 @@
+#timeline_body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-align: start;
+    background-color: white;
+    overflow: hidden;
+}
+
+.panel {
+    flex: 0 0 13%;
+    height: 100%;
+    background-color: #0085FF;
+}
+
+.content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 4rem 8rem 4rem 7rem;
+}
+
+/* Line is centered exactly under the dot: dot is 4rem wide, content padding-left is 7rem,
+   so the dot's horizontal center sits at 7rem + 2rem = 9rem from content's left edge. */
+.line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 9rem;
+    border-left: 3px dashed #A9D6FF;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.item {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+/* Outer ring: thin red/pink outline */
+.dot {
+    flex-shrink: 0;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid #CE1B4B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Middle ring: thick blue border */
+.dotMid {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 3px solid #0085FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Inner circle: solid blue fill */
+.dotInner {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    background-color: #0085FF;
+}
+
+.dotActive .dotInner {
+    background-color: #CE1B4B;
+}
+
+.text {
+    padding-top: 0.5rem;
+}
+
+.role {
+    color: #CE1B4B;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.org {
+    color: #1a1a1a;
+    font-size: 1.3rem;
+    margin: 0.3rem 0 0 0;
+}
+
+.range {
+    color: #0085FF;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 0.3rem 0 0 0;
+}
+
+@media only screen and (max-width: 800px) {
+    #timeline_body {
+        flex-direction: column;
+        height: auto;
+        min-height: 0;
+        scroll-snap-align: none;
+    }
+
+    .panel {
+        flex: 0 0 4vh;
+        width: 100%;
+    }
+
+    .content {
+        padding: 2rem 6% 2rem 5rem;
+    }
+
+    .line {
+        left: 2.5rem;
+    }
+
+    .dot {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .dotMid {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+
+    .dotInner {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .role, .org, .range {
+        font-size: 1rem;
+    }
+}

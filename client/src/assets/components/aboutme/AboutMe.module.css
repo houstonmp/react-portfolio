@@ -18,9 +18,13 @@
 @media only screen and (max-width: 600px) {}
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     #am_body {
         z-index: 6;
+        height: auto;
+        min-height: 0;
+        scroll-snap-align: none;
+        padding: 3rem 0;
     }
 }
 

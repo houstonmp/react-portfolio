@@ -42,3 +42,11 @@ body {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
+
+@media only screen and (max-width: 800px) {
+  .container {
+    scroll-snap-type: none;
+    overflow-y: visible;
+    height: auto;
+  }
+}

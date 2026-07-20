@@ -37,6 +37,15 @@
     fill: #C4E3FF;
 }
 
+.circle-3 {
+    top: 6%;
+    left: 74%;
+}
+
+.circle-3 * {
+    fill: #C4E3FF;
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (min-width: 0px) {}
 

@@ -1,135 +1,84 @@
 .information {
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 60%;
+    gap: 2rem;
+    height: 100%;
     width: 100%;
-    /* margin: 30% 15%; */
+    padding: 0 6rem 0 4%;
 }
 
-.information * {
-    flex-basis: 4rem;
-}
-
-.title {
-    min-width: 100%;
-    color: #004C93;
-    font-weight: 100;
-    font-size: 3rem;
-    margin: 0 10% 0 0;
-    text-align: right;
-    padding-right: 15%;
-    z-index: 4;
-}
-
-.info_img {
+.photo {
     aspect-ratio: 1/1;
-    display: none;
+    width: 26%;
+    max-width: 380px;
     border-radius: 50%;
-    max-width: 30%;
-    width: 30%;
-    min-height: 0;
-    margin-left: 5%;
-    border: 8px solid #CE1B4B;
     object-fit: cover;
+    border: 8px solid #CE1B4B;
+    outline: 2px solid #0085FF;
+    outline-offset: 8px;
 }
 
-.info_text {
-    flex-grow: 2;
-    max-width: 60%;
-    /* max-height: 40vh; */
-    background-color: #F1F1F1;
-    font-size: 1.2rem;
-    font-style: italic;
-    height: fit-content;
-    margin: 0 8% 0 5%;
-    padding: .5rem 1rem;
-    position: relative;
-    line-height: 1.7rem;
-    align-self: center;
-
+.traitGrid {
+    flex: 1 1 55%;
+    max-width: 55%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 2.5rem;
 }
 
-.blueBar {
+.trait {
+    flex: 1 1 calc(50% - 2.5rem);
+    min-width: 220px;
+    border-left: 4px solid #CE1B4B;
+    padding-left: 1rem;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color: #1a1a1a;
+}
+
+.traitLabel {
+    color: #CE1B4B;
+    font-weight: 700;
+}
+
+.socialLinks {
     position: absolute;
-    bottom: 1rem;
-    left: -1rem;
-    height: 10px;
-    background-color: #0085FF;
-    width: 150%;
+    bottom: 2rem;
+    right: 6rem;
 }
 
-
-@media only screen and (max-width: 650px) {
-    .info_img {
-        display: none;
-        /* width: 80%;
-        margin: 0 10%;
-        height: auto; */
-    }
-
-    .info_text {
-        margin: 0;
-        /* max-height: 4rem; */
-        align-self: auto;
-        font-size: 80%;
-        /* top: -15%; */
-    }
-
-    .blueBar {
-        top: 10px;
-    }
-}
-
-@media only screen and (min-width: 950px) {
-
-    .title {
-        font-size: 3rem;
-    }
-}
-
-@media only screen and (min-width: 1400px) {
-    .info_img {
-        display: flex;
-        aspect-ratio: 1/1;
-    }
-}
-
-
-/* @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 900px) {
     .information {
-        display: block;
-        margin: 30% 15%;
-        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 4%;
     }
 
-    .information * {
-        flex-basis: 4rem;
+    .photo {
+        width: 50%;
     }
 
-    .info_img {
-        flex-basis: 30%;
-        padding-right: 15%;
-        padding: 3rem;
-        margin: 0 50%;
-        display: block;
-        border-radius: 50%;
-        margin: 10%;
-        position: relative;
-        width: 80%;
-        height: auto;
+    .traitGrid {
+        max-width: 100%;
+        padding: 8%;
     }
 
-
-    .info_text {;
-        border-radius: 100%;
-        background-color: #F1F1F1;
-        font-size: 1.2rem;
-        font-style: italic;
-        margin: 8rem 8% 8rem 5%;
-        padding: .5rem 1rem;
-        position: absolute;
-        bottom: 10%;
+    .trait {
+        flex: 1 1 100%;
     }
-} */
+
+    .socialLinks {
+        position: static;
+        margin-top: 1rem;
+        align-self: center;
+        right: auto;
+    }
+}

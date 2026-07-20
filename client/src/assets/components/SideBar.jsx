@@ -15,7 +15,6 @@ const SideBar = (props) => {
         }
 
         let scrollValue = targetValue * scrollLength;
-        console.log('Scrolling:', scrollValue, targetValue);
         container.scrollTo({
             top: scrollValue,
             left: 0,
@@ -30,8 +29,7 @@ const SideBar = (props) => {
                 <span value="1" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 1) && styles.active}`}></span>
                 <span value="2" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 2) && styles.active}`}></span>
                 <span value="3" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 3) && styles.active}`}></span>
-                {/* <span value="4" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 4) && styles.active}`}></span>
-                <span value="5" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 5) && styles.active}`}></span> */}
+                <span value="4" onClick={clickHandler} className={`${styles.dot} ${isDark ? styles.dark : styles.light} ${(pageLocation === 4) && styles.active}`}></span>
             </div >
         </>
     );
